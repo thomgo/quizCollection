@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide blueback">
+        <div class="container">
+          <h1 class="display-3">Quiz CSS</h1>
+          <p class="lead">Questionnaire sur les bases CSS</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Qu'est ce qu'un sélecteur ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Une fonction CSS qui permet de sélectionner des règles"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="L'élément HTML sans les <> sur lequel notre règle s'applique"></input>
+          <input type="radio" onclick="getAnswers()" value="Un boutton sur une page web"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Le sélecteur en CSS permet d'identifier l'élément HTML sur lequel nos règles vont s'appliquer</p>
+      </article>
+
+      <article class="question">
+          <p>Qu'est ce qu'une propriété ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="Un aspect d'un élément HTML que l'on peut modifier"></input>
+          <input type="radio" onclick="getAnswers()" value="Un espace réservé sur une page web"></input>
+          <input type="radio" onclick="getAnswers()" value="Une valeur numérique ou sémantique"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Une propriété CSS permet de modifier un aspect particulier d'un élément HTML comme sa couleur ou sa taille par exemple.</p>
+      </article>
+
+      <article class="question">
+          <p>Parmi les propositions suivantes, laquelle n'est pas une valeur reconnue par CSS</p>
+
+          <input type="radio" onclick="getAnswers()" value="em"></input>
+          <input type="radio" onclick="getAnswers()" value="centimètres"></input>
+          <input type="radio" onclick="getAnswers()" value="pixels"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="mètres carrés"></input>
+          <input type="radio" onclick="getAnswers()" value="pourcentages"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">CSS connaît énormement d'unités différentes (même les centimètes, les pouces etc) mais les mètres carrés n'en font pas partie</p>
+      </article>
+
+      <article class="question">
+          <p>Parmi les proposition suivantes, laquelle permet de sélectionner un titre de niveau 2 ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="h3 { }"></input>
+          <input type="radio" onclick="getAnswers()" value="<h2/> { }"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="h2 { }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Un titre de niveau deux correspond à un élément h2 dans notre document HTML. Pour le sélectionner en CSS il faut lui retirer ses &lt&gt</p>
+      </article>
+
+      <article class="question">
+          <p>Quel couple propriété/valeur est déclaré correctement ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="h1 { background-color: pink; }"></input>
+          <input type="radio" onclick="getAnswers()" value="div { width = 100px; }"></input>
+          <input type="radio" onclick="getAnswers()" value="span { color yellow; }"></input>
+          <input type="radio" onclick="getAnswers()" value="header { font-size: 50px }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">La bonne réponse était la première. Il faut toujours déclarer la propriété suivie de : puis de sa valeur et terminer par un point virgule</p>
+      </article>
+
+      <article class="question">
+          <p>Que permet de faire le propriété text-align ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Souligner, barrer ou surligner le texte"></input>
+          <input type="radio" onclick="getAnswers()" value="Gérer l'espacement entre les lettres des mots"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Gérer la position de notre texte dans son container"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Text-align nous permet de gérer l'alignement du texte dans son container selon que l'on souhaite le placer à gauche ("left"), au centre ("center") ou à droite ("right")</p>
+      </article>
+
+      <article class="question">
+          <p>Quelle valeur n'est pas assignable à la propriété font-weight ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="italic"></input>
+          <input type="radio" onclick="getAnswers()" value="400"></input>
+          <input type="radio" onclick="getAnswers()" value="bold"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Cette propriété gère l'épaisseur du texte, que celui-ci soit en italique ne la concerna absolument pas</p>
+      </article>
+
+      <article class="question">
+          <p>Que permet de gérer la propriété font-size ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Le fond de nos éléments"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="la taille de nos polices"></input>
+          <input type="radio" onclick="getAnswers()" value="L'espacement entre nos lignes de texte"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Font fait référence à la police (notre type d'écriture) et size à la taille, la propriété font-size permet donc de gérer la taille de nos polices</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>

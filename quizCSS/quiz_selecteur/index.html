@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide blueback">
+        <div class="container">
+          <h1 class="display-3">Quiz CSS</h1>
+          <p class="lead">Connaissances avancées sur les selecteurs CSS</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Combien d'éléments puis-je cibler avec une seule règle en CSS ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Un seul"></input>
+          <input type="radio" onclick="getAnswers()" value="4 maximum"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Autant que je souhaite"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Il n'y a aucune limite au nombre d'éléments que vous pouvez cibler avec une règle CSS. La seule obligation et de bien les séparer par une virgule comme ceci: p, h1, div { }</p>
+      </article>
+
+      <article class="question">
+          <p>Que suis-je en train de cibler si j'écris: .header { } ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="La balise <header> de ma page"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Un élément de la classe header"></input>
+          <input type="radio" onclick="getAnswers()" value="La balise <head> de ma page"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">En utilisant un point on indique à CSS une classe, ici je cible donc la classe header. Notez cependant qu'il est déconseillé d'utiliser une telle classe puisqu'une balise &ltheader&gt existe déjà en HTML.</p>
+      </article>
+
+      <article class="question">
+          <p>Quel est le sélecteur le plus précis en CSS ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="La classe"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="L'id"></input>
+          <input type="radio" onclick="getAnswers()" value="Le sélecteur universel"></input>
+          <input type="radio" onclick="getAnswers()" value="Un élément dans un élément"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">L'id est le sélecteur le plus précis en CSS tout simplement car on ne peux pas avoir deux fois le même ID sur une page HTML. Il est donc unique et permet de cibler un seul élément, il s'utilise en dernier recours</p>
+      </article>
+
+      <article class="question">
+          <p>Si j'écris: nav ul p { }. Que suis-je en train de cibler ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Un paragraphe dans plusieurs listes dans une nav"></input>
+          <input type="radio" onclick="getAnswers()" value="Mes balises <nav>, <ul>, <p>"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Tous mes paragraphes qui sont dans une liste, elle-même dans une nav"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Nous pouvons être extrêment précis dans les sélections d'éléments en CSS et ne cibler que ceux qui se trouvent dans certains éléments. Dans ce cas il faut lire de droite à gauche : tous les paragraphes dans une liste non-ordonnée dans une balise nav</p>
+      </article>
+
+      <article class="question">
+          <p>Que représente * ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="Le sélecteur universel en CSS"></input>
+          <input type="radio" onclick="getAnswers()" value="Un astérisque"></input>
+          <input type="radio" onclick="getAnswers()" value="Le symbole d'un commentaire"></input>
+          <input type="radio" onclick="getAnswers()" value="Une manière d'indiquer la fin d'une instruction à l'ordinateur"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Il s'agit du sélecteur universel qui permet d'appliquer une règle à tous les composants de notra page HTML</p>
+      </article>
+
+      <article class="question">
+          <p>Pour aligner mon texte au centre d'un élément d'id news je doit écrire...</p>
+
+          <input type="radio" onclick="getAnswers()" value="id news { text-align: center; }"></input>
+          <input type="radio" onclick="getAnswers()" value=".news { textalign: center; }"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="#news { text-align: center; }"></input>
+          <input type="radio" onclick="getAnswers()" value="#news { textalign: center; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">En CSS nous devons cibler l'id avec un #. Les réponses 1 et 2 sont donc fausses. Enfin la propriété pour gérer l'alignement du texte est text-align et non textalign. La bonne réponse est donc la 3.</p>
+      </article>
+
+      <article class="question">
+          <p>Pour souligner le texte de mes éléments de classe subitem dans ma navigation j'écris...</p>
+
+          <input type="radio" onclick="getAnswers()" value=".subitem nav { text-decoration: underline; }"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="nav .subitem { text-decoration: underline; }"></input>
+          <input type="radio" onclick="getAnswers()" value="nav .subitem { text-style: underline; }"></input>
+          <input type="radio" onclick="getAnswers()" value=".subitem { text-style: underline; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">En css la propriété text-style n'existe pas, les deux dernières réponses sont donc fausses. Enfin, on veut cibler les éléments de classe subitem dans la navigation et non l'inverse, la bonne réponse était donc nav .subitem et non l'inverse.</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>

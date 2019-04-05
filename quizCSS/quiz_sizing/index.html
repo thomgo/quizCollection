@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide blueback">
+        <div class="container">
+          <h1 class="display-3">Quiz CSS</h1>
+          <p class="lead">Le sizing en CSS</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Quelle est la différence entre une unité absolue et relative</p>
+
+          <input type="radio" onclick="getAnswers()" value="L'unité absolue ne disparaîtra jamais des usages, l'unité relative est amenée à disparaître"></input>
+          <input type="radio" onclick="getAnswers()" value="Il n'y a pas vraiment de différence, ce sont simplement deux notations similaires"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="L'unité absolue aura un rendu fixe peu importe la taille du support alors que l'unité relative aura un rendu proportionnel à la taille du support"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les pixels sont une unité absolue, 500px feront toujours la taille de 500px peu importe la taille de l'écran. Les pourcentages sont une unité relative, 50% d'un écran de 1000px ne fait pas la même taille que 50% d'un écran de 1900px. La bonne réponse était donc la 3.</p>
+      </article>
+
+      <article class="question">
+          <p>Je souhaite utiliser les em pour mes tailles de police mais je n'ai défini aucune taille de référence au préalable. Qu'elle sera la taille par défaut de 1em ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="La taille d'un em définie par le MDN soit 0.7cm"></input>
+          <input type="radio" onclick="getAnswers()" value="Impossible de savoir il s'agit d'une unité relative"></input>
+          <input type="radio" onclick="getAnswers()" value="14px"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="la taille de police par défaut de mon navigateur, soit bien souvent 16px"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les em sont une unité relative, ils se basent donc sur une unité de référence qui par défaut et la taille de police du navigateur (16px)</p>
+      </article>
+
+      <article class="question">
+          <p>J'ai une section qui fait 300px de large sur smartphone et 800px sur ordinateur. A l'intérieur se trouve un article de largeur 25%. Qu'elle sera la largeur de mon article en px sur smartphones et ordinateurs ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="75px et 200px"></input>
+          <input type="radio" onclick="getAnswers()" value="90px et 250px"></input>
+          <input type="radio" onclick="getAnswers()" value="30% et 80%"></input>
+          <input type="radio" onclick="getAnswers()" value="300px et 800px"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">25% de 300px = 75px (4*75=300) et 25% de 800px = 200px (4*200=800)</p>
+      </article>
+
+      <article class="question">
+          <p>Quelle est la spécificité des REM ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Ils sont moins lourds à charger que le EM pour le navigateur"></input>
+          <input type="radio" onclick="getAnswers()" value="Il s'agit juste d'une autre manière d'écrire EM"></input>
+          <input type="radio" onclick="getAnswers()" value="Ils permettent de mesurer la taille de l'écran"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Ils sont toujours relatifs à la taille de police par défaut du document HTML"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les REM sont une unité relative semblable aux EM à la différence qu'ils seront toujours proportionnels à la taille de police par défaut du document (16px souvent). Autrement-dit un REM fera toujours 16px et deux REM 32px</p>
+      </article>
+
+      <article class="question">
+          <p>Dans mon header où j'ai défini la taille de police à 30px, j'écris un titre de taille 3em. Quelle sera la taille de mon titre en pixels ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="48px"></input>
+          <input type="radio" onclick="getAnswers()" value="30px"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="90px"></input>
+          <input type="radio" onclick="getAnswers()" value="46px"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Dans mon header j'ai défini la taille de police par défaut à 30px, par conséquent 3em valent 3*30 soit 90px</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>

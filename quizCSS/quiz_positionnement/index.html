@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide blueback">
+        <div class="container">
+          <h1 class="display-3">Quiz CSS</h1>
+          <p class="lead">Le positionnement en CSS</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Quelle est la particularité du positionnement des éléments de type block ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Ce sont les carrés les plus importants de notre page"></input>
+          <input type="radio" onclick="getAnswers()" value="Il se placent sur une même ligne, toujours à la suite des autres"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Ils ne se placent jamais sur la même ligne, toujours à la suite des autres"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les éléments de type block ont comme particularité de ne jamais se mettre sur une même ligne</p>
+      </article>
+
+      <article class="question">
+          <p>Quelle est la particularité des éléments de type inline ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="Ils se placent sur la même ligne, les uns à la suite des autres"></input>
+          <input type="radio" onclick="getAnswers()" value="On peut modifier leurs propriétés physiques à l'envie"></input>
+          <input type="radio" onclick="getAnswers()" value="Ces éléments n'ont pas de propriétés particulières"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les éléments de type inline, comme leur nom l'indique, viennent toujours se placer sur une même ligne, à la différence des éléments de type block</p>
+      </article>
+
+      <article class="question">
+          <p>Quelle propriété CSS permet de modifier la nature des éléments et donc leur positionnement ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="dispatch"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="display"></input>
+          <input type="radio" onclick="getAnswers()" value="nature"></input>
+          <input type="radio" onclick="getAnswers()" value="pos"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">La propriété qui permet de modifier la nature des éléments est la propriété display, on dit d'ailleurs qu'on modifie le display des éléments.</p>
+      </article>
+
+      <article class="question">
+          <p>Supposons que j'ai plusieurs articles que je souhaite mettre sur une même ligne, que dois-je écrire en CSS ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="article { display: inlineblock; }"></input>
+          <input type="radio" onclick="getAnswers()" value="article { display: inline; }"></input>
+          <input type="radio" onclick="getAnswers()" value="article { display: block-inline; }"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="article { display: inline-block; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les articles sont naturellement des éléments de type block. Avec display inline-block nous pouvons les faire passer en ligne mais conserver toutes leurs propriétés d'éléments block</p>
+      </article>
+
+      <article class="question">
+          <p>Maintenant je souhaite que ces articles soient alignés en haut de leur container, que dois-je écrire ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="article { vertical-align: top; }"></input>
+          <input type="radio" onclick="getAnswers()" value="article { horizontal-align: top; }"></input>
+          <input type="radio" onclick="getAnswers()" value="article { verticalalign: top; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Quand des éléments sont en display inline-block, ils viennent naturellement se placer sur une ligne de base en bas de leur container. Pour règler leur position verticale, nous pouvons utiliser la propriété vertical-align.</p>
+      </article>
+
+      <article class="question">
+          <p>Qu'est ce qu'un élément floattant ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="Un élément superposé sur un autre"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Un élément collé à droite ou à gauche de son container et qui a entraîné avec lui ses voisins"></input>
+          <input type="radio" onclick="getAnswers()" value="Un élément dont la hauteur et la largeur son variables"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Il est très fréquent de voir sur des blogs du texte entourer une image. Les images sont dites flottantes, c'est-à-dire qu'elle sont collées à droite ou à gauche de leur container et les éléments qui les suivent viennent se placer autour.</p>
+      </article>
+
+      <article class="question">
+          <p>Je souhaite faire flotter une image à droite, je peux écrire</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="img { float: right; }"></input>
+          <input type="radio" onclick="getAnswers()" value="image { float: right; }"></input>
+          <input type="radio" onclick="getAnswers()" value="img { float: left; }"></input>
+          <input type="radio" onclick="getAnswers()" value="img { flote: left; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Pour faire flotter un élément en CSS, on utilise la propriété float qui prend comme valeur la direction gauche (left) ou droite (right)</p>
+      </article>
+
+      <article class="question">
+          <p>Je souhaite empêcher que le paragraphe après mon image vienne l'entourer comment puis-je faire ?</p>
+
+          <input type="radio" onclick="getAnswers()" value="p { float: none; }"></input>
+          <input type="radio" onclick="getAnswers()" value=" p { float: right; }"></input>
+          <input type="radio" onclick="getAnswers()" value="img { float: none; }"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="p { clear: right; }"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">En CSS la propriété clear permet de contrer le float, elle s'applique sur l'élément censé entourer l'élément flottant. Elle prend comme valeur la direction du float ou both</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>
