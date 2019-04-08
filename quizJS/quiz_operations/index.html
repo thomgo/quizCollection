@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Quiz JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide jsyellow">
+        <div class="container">
+          <h1 class="display-3">Quiz JavaScript</h1>
+          <p class="lead">Les opérations de base</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Qu'est ce que la concaténation ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="Une maladie intestinale"></input>
+          <input type="radio" onclick="getAnswers()" value="L'action de couper nos chaînes de caractères en plus petites chaînes"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="La possibilité de joindre deux chaînes de caractères pour n'en former plus qu'une"></input>
+          <input onclick="getAnswers()" type="radio" value="L'action de stocker une chaîne de caractères dans une variable"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">La concaténation c'est l'action de prendre plusieurs chaînes de caractères pour n'en former plus qu'une. Elle permet notamment de récupérer les données aux fur et à mesure puis de les regrouper dans une seule et unique variable de type string</p>
+      </article>
+
+      <article class="question">
+          <p>Je souhaite concaténer deux variables (firstName et lastName) dans une nouvelle variable fullName, que dois-je écrire ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="var fullName = firstName . lastName ;"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="var fullName = firstName + lastName ;"></input>
+          <input type="radio" onclick="getAnswers()" value="var fullName = firstName, lastName ;"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">L'opérateur qui permet d'effectuer une concaténation est le signe +, la bonne réponse était donc la deuxième. Si vous y réfléchissez concaténer revient à additionner des chaînes de caractères.</p>
+      </article>
+
+      <article class="question">
+          <p>Que va m'afficher l'instruction suivante: alert(42/7); ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="6"></input>
+          <input type="radio" onclick="getAnswers()" value="42/7"></input>
+          <input type="radio" onclick="getAnswers()" value="Error"></input>
+          <input type="radio" onclick="getAnswers()" value="NaN"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Pour peu que les données soient du type number, il est tout à fait possible de réaliser des opérations mathématiques en JavaScript. Ici nous afficherons donc le résultat de l'opération, soit 6.</p>
+      </article>
+
+      <article class="question">
+          <p>Je souhaite stocker dans une variable result le résultat de 25*115, que dois-je écrire ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="var result  = 25 / 115 ;"></input>
+          <input type="radio" onclick="getAnswers()" value="var result = '25' * '115' ;"></input>
+          <input type="radio" onclick="getAnswers()" value="result = 25 * 115 ;"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="var result = 25 * 115 ;"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Pour réaliser une opération mathématique, les données doivent être de type number et non string. Il suffit alors de déclarer une nouvelle variable avec pour contenu l'opération à réaliser, la bonne réponse était donc la dernière.</p>
+      </article>
+
+      <article class="question">
+          <p>Que sont les méthodes et les propriétés ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="Des formes d'opérations pré-enregistrées capables de nous fournir des informations ou d'effectuer des modifications sur nos données"></input>
+          <input type="radio" onclick="getAnswers()" value="Des types de données qui ne font pas partie des données primitives"></input>
+          <input type="radio" onclick="getAnswers()" value="des manières particulières d'organiser notre code pour qu'il soit plus lisible"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les méthodes et les propriétés sont un ensemble d'opérations pré-enregistrées. Les propriétés sont liées à un certain type de données, la longueur est par exemple une propriété des données de type string. Les méthodes sont des opérations connues de JavaScript qui permettent de réaliser les transformations les plus courantes sur nos données, par exemple diviser une string en sous-strings.</p>
+      </article>
+
+      <article class="question">
+          <p>J'ai une variable clientName de type string et je veux en afficher la longueur à l'écran. Je peux écrire...</p>
+
+          <input onclick="getAnswers()" type="radio" value="alert(var clientName.length);"></input>
+          <input type="radio" onclick="getAnswers()" value="alert(clientName.length());"></input>
+          <input type="radio" onclick="getAnswers()" value="alert(length(clientName));"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="alert(clientName.length);"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">La longueur est une propriété des données de type string (entre autres). On l'obtient en ajoutant .length sans parenthèses à la variable concernée, la bonne réponse était donc la dernière.</p>
+      </article>
+
+      <article class="question">
+          <p>J'ai une variable name de type string et je veux l'afficher en minuscules. Je peux écrire...</p>
+
+          <input onclick="getAnswers()" type="radio" value="alert(name.toLowerCase);"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="alert(name.toLowerCase());"></input>
+          <input type="radio" onclick="getAnswers()" value="alert(toLowerCase(name));"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Pour afficher ma string en minuscules, je dois effectuer une transformation, je dois donc utiliser une méthode JavaScript. Cette méthode est .toLowerCase(), elle vient s'ajouter à la variable concernée, le point faisant office de liaison. La bonne réponse était donc la deuxième.</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Quiz JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide jsyellow">
+        <div class="container">
+          <h1 class="display-3">Quiz JavaScript</h1>
+          <p class="lead">Les types primitifs</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Parmi ces propositions, laquelle n'est pas un type primitif ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="string"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="binaire"></input>
+          <input type="radio" onclick="getAnswers()" value="number"></input>
+          <input type="radio" onclick="getAnswers()" value="undefined"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Le binaire n'est pas un type primitif du JavaScript, c'est par contre le langage de base tous les ordinateurs</p>
+      </article>
+
+      <article class="question">
+          <p>Combien de de types primitifs comptons-nous en JavaScript ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="5"></input>
+          <input type="radio" onclick="getAnswers()" value="4"></input>
+          <input type="radio" onclick="getAnswers()" value="6"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">En JavaScript, il y a 5 types primitifs: string, number, boolean, null et undefined</p>
+      </article>
+
+      <article class="question">
+          <p>A quoi reconnaît-on une donnée de type string ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="Elle est entourée de chevrons: <<ma phrase>>"></input>
+          <input type="radio" onclick="getAnswers()" value="Aucun signe particulier, on voit que c'est du texte"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="Elle est entourée de guillemets: 'ma phrase'"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">On reconnaît du texte en JavaScript à la présence de guillemets "mon texte" ou 'mon texte', il ne faut surtout pas les oublier au risque de faire bugger notre programme</p>
+      </article>
+
+      <article class="question">
+          <p>Parmi ces valeurs, laquelle est celle d'un boolean</p>
+
+          <input onclick="getAnswers()" type="radio" value="undifined"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="true"></input>
+          <input type="radio" onclick="getAnswers()" value="null"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Un boolean ne peut prendre que deux valeurs : true ou false, la bonne réponse était donc la 2. Null et undefined sont eux-mêmes des types primitifs.</p>
+      </article>
+
+      <article class="question">
+          <p>Laquelle des propositions suivantes ne sera pas considérée comme un nombre en JavaScript ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="3"></input>
+          <input type="radio" onclick="getAnswers()" value="3.3"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="trois"></input>
+          <input type="radio" onclick="getAnswers()" value="-3"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Un nombre en JavaScript est toujours écrit au format numérique, jamais au format texte.</p>
+      </article>
+
+      <article class="question">
+          <p>Que vaut une valeur de type null ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="La valeur est nulle, elle existe mais ne vaut rien"></input>
+          <input type="radio" onclick="getAnswers()" value="On ne peut pas le dire, on ne sait pas ce qu'il y a dedans"></input>
+          <input type="radio" onclick="getAnswers()" value="Rien du tout, elle n'existe pas"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Null existe et vaut quelque chose, il ne vaut rien ! En JavaScript il est important de savoir si quelque chose n'a pas de valeur. On sait donc ce qu'il y a dedans, il n'y a rien !</p>
+      </article>
+
+      <article class="question">
+          <p>Dans quel cas une donnée peut-elle être de type undefined ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="Quand on s'est trompé dans l'écriture d'un nombre ou d'une chaîne de caractères"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="Quand elle n'existe pas et qu'on ne peut donc pas savoir son contenu"></input>
+          <input type="radio" onclick="getAnswers()" value="Quand son type n'est pas répertorié dans la liste des types primitifs"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Quand une donnée est de type undefined cela veut dire qu'elle n'a pas été déclarée auparavant, l'ordinateur ne sait donc pas qu'elle existe et ne sait pas de quoi vous parlez.</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>

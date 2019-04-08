@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Quiz JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://use.fontawesome.com/e3d409ebd5.js"></script>
+    </head>
+
+    <body>
+
+      <div class="jumbotron jumbotron-fluide jsyellow">
+        <div class="container">
+          <h1 class="display-3">Quiz JavaScript</h1>
+          <p class="lead">Aller plus loin avec les types primitifs</p>
+        </div>
+      </div>
+
+<div class="container">
+      <article class="question">
+          <p>Pourquoi doit-on échapper certains caractères dans nos strings ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="Pour leur permettre de 's'enfuir', c'est-à-dire les stocker en mémoire"></input>
+          <input type="radio" onclick="getAnswers()" value="Pour marquer leur importance particulière un peu comme le strong en HTML"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="Pour que les caractères spéciaux des strings déjà utilisés par JS comme les guillemets puissent être lus"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Certains caractères sont déjà utilisés dans la syntaxe JavaScript. Quand l'ordinateur en rencontre un dans une chaîne de caractères, il ne peut pas savoir s'il s'agit d'une instruction ou de texte. Il faut donc échapper le caractère pour lui indiquer qu'il s'agit bien de texte</p>
+      </article>
+
+      <article class="question">
+          <p>Quelle est la particularité des doubles guillemets " " ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="On peut intégrer des guillemets simples sans devoir les échapper"></input>
+          <input type="radio" onclick="getAnswers()" value="Elles n'ont rien de particulier"></input>
+          <input type="radio" onclick="getAnswers()" value="Elles sont reconnues que l'ordinateur soit français ou américain"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Les doubles guillemets ont pour particularité d'accepter la présence de guillemets simples, celles-ci ne seront pas considérées comme des caractères spéciaux. Nous pouvons donc écrire "l'autre jour" sans provoquer d'erreur.</p>
+      </article>
+
+      <article class="question">
+          <p>Parmi les notations suivantes, laquelle n'est pas correcte pour un nombre ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="'4'"></input>
+          <input type="radio" onclick="getAnswers()" value="26"></input>
+          <input type="radio" onclick="getAnswers()" value="123.456"></input>
+          <input type="radio" onclick="getAnswers()" value="-4"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">L'une des erreurs les plus courantes est de mettre ses nombres entre guillemets. Il faut savoir qu'ils ne seront alors plus considérés comme des nombres mais comme du texte</p>
+      </article>
+
+      <article class="question">
+          <p>A quoi vont nous servir les booleans ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="A écrire des suites de 0 et de 1 plus facilement lisibles par l'ordinateur"></input>
+          <input class="right" type="radio" onclick="getAnswers()" value="A réaliser des tests basiques en mode binaire pour évaluer les actions que doit réaliser l'ordinateur"></input>
+          <input type="radio" onclick="getAnswers()" value="A baliser notre code pour mieux l'organiser"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Un boolean ne peut prendre que deux valeurs true ou false, il permet de décomposer nos programmes en une mutlitude de sous-actions ou de données que l'on peut évaluer à vrai ou faux et agir en conséquence.</p>
+      </article>
+
+      <article class="question">
+          <p>Parmi les propositions suivantes, laquelle échappe correctement l'apostrophe ?</p>
+
+          <input class="right" onclick="getAnswers()" type="radio" value="'Le crayon de l\'écolier'"></input>
+          <input type="radio" onclick="getAnswers()" value="'Le crayon de l'écolier'"></input>
+          <input type="radio" onclick="getAnswers()" value="'Le crayon de l'\écolier'"></input>
+          <input type="radio" onclick="getAnswers()" value="'Le crayon de l\'\écolier'"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">Pour échapper un caractère, il faut utiliser le backslash et le placer juste avant le caractère à échapper. Ici la bonne réponse était donc la première.</p>
+      </article>
+
+      <article class="question">
+          <p>Que signifie NaN ?</p>
+
+          <input onclick="getAnswers()" type="radio" value="not a null"></input>
+          <input type="radio" onclick="getAnswers()" value="nothing and none"></input>
+          <input type="radio" onclick="getAnswers()" value="nice and new"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="not a number"></input>
+
+          <button class="validate">Valider</button>
+          <p class="explaination">NaN signifie not a number. Cette valeur est renvoyée comme résultat lors d'opération considérées comme mathématiquement invalides comme diviser 0 par 0 par exemple.</p>
+      </article>
+
+      <article class="score">
+      </article>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+
+</html>
